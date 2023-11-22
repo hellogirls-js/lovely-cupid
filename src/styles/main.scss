@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "Lovehearts";
+  src: url("../fonts/Lovehearts_XYZ.ttf") format(truetype);
+}
+
+@keyframes float {
+  from {
+    transform: translateY(5px);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes bar {
+  @for $i from 1 through 5 {
+    #{($i * 4%)} {
+      transform: scaleY(random(40) * 100%);
+    }
+    100% {
+      transform: scaleY(1);
+    }
+  }
+}
+
+#aira-container {
+  animation: float 0.5s linear 0s infinite alternate;
+}
+
+h1 {
+  font-family: "Lovehearts", sans-serif;
+  font-size: 3rem;
+}
+
+.animated-bar {
+  transform-origin: bottom;
+}
+
+#bar-1 {
+  animation: bar 3s linear 0.2s infinite alternate;
+}
+
+#bar-2 {
+  animation: bar 3s linear 1.5s infinite normal;
+}
+
+#bar-3 {
+  animation: bar 4s linear 0.9s infinite normal;
+}
+
+#bar-4 {
+  animation: bar 2s linear 0.4s infinite normal;
+}
+
+#bar-5 {
+  animation: bar 5s linear 1s infinite normal;
+}
+
+#bar-6 {
+  animation: bar 1s linear 2s infinite normal;
+}
+
+#bar-7 {
+  animation: bar 4s linear 1.2s infinite normal;
+}
+
+#bar-8 {
+  animation: bar 3s linear 0.4s infinite normal;
+}
+
+#bar-9 {
+  animation: bar 1s linear 1.9s infinite normal;
+}
+
+#bar-10 {
+  animation: bar 2s linear 0.8s infinite normal;
+}
+
