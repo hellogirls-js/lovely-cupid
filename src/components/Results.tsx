@@ -57,9 +57,6 @@ export default function Results({state}: {state: QuizState}) {
     const STAT_COLORS = ["#c4ceff", "#abb8ff", "#8c9eff", "#6e84ff", "#546fff"];
     const BLOOD_COLORS = ["#c4ceff", "#8c9eff", "#6e84ff", "#546fff"];
 
-    console.log(Math.round(luckyBachelor.compat_stats.blood_type / (100/3)), luckyBachelor.compat_stats.blood_type / (100/3), luckyBachelor.compat_stats.blood_type);
-    console.log(resultsArray);
-
     return (
         <Container sx={{ mt: 3, mb: 5 }}>
             <Typography component="h1" variant="h1">your ideal match is <strong>{luckyBachelor.first_name === "Aira" ? "me, the Lovely~Cupid herself" : `${luckyBachelor.first_name.toLowerCase()} ${luckyBachelor.last_name.toLowerCase()}`}! Z</strong></Typography>
