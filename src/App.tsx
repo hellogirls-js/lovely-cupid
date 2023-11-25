@@ -123,11 +123,6 @@ function App() {
     }
   }
 
-  useEffect(() => {
-    console.log("updating state");
-    console.log("userInfo", state.userInfo);
-  }, [state]);
-
   return (
     <Fragment>
       <CssBaseline />

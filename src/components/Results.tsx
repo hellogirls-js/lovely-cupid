@@ -1,9 +1,9 @@
-import { Box, Container, Grid, Paper, Stack, Typography, useTheme } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary, Box, Container, Grid, Paper, Stack, Typography, useTheme } from "@mui/material";
 import charaData from "../chara_data.json";
 import { useState } from "react";
 import { BLOOD_MAP, HOROSCOPE_MAP, MBTI_MAP } from "../utility";
 import "../styles/main.scss";
-import { Favorite } from "@mui/icons-material";
+import { ExpandMore, Favorite } from "@mui/icons-material";
 
 export default function Results({state}: {state: QuizState}) {
     const theme = useTheme();
@@ -19,7 +19,6 @@ export default function Results({state}: {state: QuizState}) {
         }
 
         const MULTIPLIER = (100 / amtOfInfo) / 100;
-        console.log("multiplier", MULTIPLIER);
 
         changingData.forEach((chara: CharacterInfo, index: number) => {
             chara.index = index;
@@ -53,13 +52,16 @@ export default function Results({state}: {state: QuizState}) {
     }
 
     const resultsArray = computeResults(state.userInfo);
-    console.log(resultsArray);
     const luckyBachelor = resultsArray[0];
 
     const STAT_COLORS = ["#c4ceff", "#abb8ff", "#8c9eff", "#6e84ff", "#546fff"];
+    const BLOOD_COLORS = ["#c4ceff", "#8c9eff", "#6e84ff", "#546fff"];
+
+    console.log(Math.round(luckyBachelor.compat_stats.blood_type / (100/3)), luckyBachelor.compat_stats.blood_type / (100/3), luckyBachelor.compat_stats.blood_type);
+    console.log(resultsArray);
 
     return (
-        <Container sx={{ mt: 3 }}>
+        <Container sx={{ mt: 3, mb: 5 }}>
             <Typography component="h1" variant="h1">your ideal match is <strong>{luckyBachelor.first_name === "Aira" ? "me, the Lovely~Cupid herself" : `${luckyBachelor.first_name.toLowerCase()} ${luckyBachelor.last_name.toLowerCase()}`}! Z</strong></Typography>
             <Paper sx={{ p: 3, mt: 3, transform: "rotate(-2deg)" }}>
                 <img src={luckyBachelor.card} alt={luckyBachelor.first_name} style={{ width: "100%", borderRadius: theme.shape.borderRadius}} />
@@ -73,7 +75,7 @@ export default function Results({state}: {state: QuizState}) {
                             <Stack>
                                 <strong>Sun sign compatibility</strong>
                                 <Stack direction="row" mt={1}>
-                                    {new Array(luckyBachelor.compat_stats.sun_sign / 25).fill(undefined).map((v, index) => <Favorite sx={{fill: STAT_COLORS[index]}} />)}
+                                    {new Array(luckyBachelor.compat_stats.sun_sign / 25).fill(undefined).map((v, index) => <Favorite key={index} sx={{fill: STAT_COLORS[index]}} />)}
                                 </Stack>
                             </Stack>
                         </Paper>
@@ -83,7 +85,7 @@ export default function Results({state}: {state: QuizState}) {
                             <Stack>
                                 <strong>Moon sign compatibility</strong>
                                 <Stack direction="row" mt={1}>
-                                    {new Array(luckyBachelor.compat_stats.moon_sign / 25).fill(undefined).map((v, index) => <Favorite sx={{fill: STAT_COLORS[index]}} />)}
+                                    {new Array(luckyBachelor.compat_stats.moon_sign / 25).fill(undefined).map((v, index) => <Favorite key={index} sx={{fill: STAT_COLORS[index]}} />)}
                                 </Stack>
                             </Stack>
                         </Paper>
@@ -93,7 +95,7 @@ export default function Results({state}: {state: QuizState}) {
                             <Stack>
                                 <strong>Venus sign compatibility</strong>
                                 <Stack direction="row" mt={1}>
-                                    {new Array(luckyBachelor.compat_stats.venus_sign / 25).fill(undefined).map((v, index) => <Favorite sx={{fill: STAT_COLORS[index]}} />)}
+                                    {new Array(luckyBachelor.compat_stats.venus_sign / 25).fill(undefined).map((v, index) => <Favorite key={index} sx={{fill: STAT_COLORS[index]}} />)}
                                 </Stack>
                             </Stack>
                         </Paper>
@@ -104,7 +106,7 @@ export default function Results({state}: {state: QuizState}) {
                                 <Stack>
                                     <strong>MBTI compatibility</strong>
                                     <Stack direction="row" mt={1}>
-                                        {new Array(luckyBachelor.compat_stats.mbti / 25).fill(undefined).map((v, index) => <Favorite sx={{fill: STAT_COLORS[index]}} />)}
+                                        {new Array(luckyBachelor.compat_stats.mbti / 25).fill(undefined).map((v, index) => <Favorite key={index} sx={{fill: STAT_COLORS[index]}} />)}
                                     </Stack>
                                 </Stack>
                             </Paper>
@@ -116,7 +118,7 @@ export default function Results({state}: {state: QuizState}) {
                                 <Stack>
                                     <strong>Blood type compatibility</strong>
                                     <Stack direction="row" mt={1}>
-                                        {new Array(luckyBachelor.compat_stats.blood_type / 25).fill(undefined).map((v, index) => <Favorite sx={{fill: STAT_COLORS[index]}} />)}
+                                        {new Array(Math.round(luckyBachelor.compat_stats.blood_type / (100/3))).fill(undefined).map((v, index) => <Favorite sx={{fill: BLOOD_COLORS[index]}} />)}
                                     </Stack>
                                 </Stack>
                             </Paper>
@@ -124,7 +126,26 @@ export default function Results({state}: {state: QuizState}) {
                     )}
                 </Grid> 
             </Box>
-            
+            <Accordion sx={{mt: 5}}>
+                <AccordionSummary 
+                    expandIcon={<ExpandMore />} 
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                >
+                    <Typography>View other candidates!</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Stack gap={5}>
+                        {resultsArray.map(chara => 
+                            <Stack direction="row" gap={3} justifyContent={"space-between"}>
+                                <Typography>{chara.first_name} {chara.last_name}</Typography>
+                                <Typography>{chara.compat_val}%</Typography>
+                            </Stack>
+                        )}
+                    </Stack>
+                    
+                </AccordionDetails>
+            </Accordion>
         </Container>
     )
 }
