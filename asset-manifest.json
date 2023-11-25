@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/lovely-cupid/static/css/main.80bcb4bd.css",
+    "main.css": "/lovely-cupid/static/css/main.5b5e571c.css",
     "main.js": "/lovely-cupid/static/js/main.dcca3d6f.js",
     "static/js/787.49875e93.chunk.js": "/lovely-cupid/static/js/787.49875e93.chunk.js",
     "static/media/AIRABU_big.png": "/lovely-cupid/static/media/AIRABU_big.ce800b46a4ba628d48b5.png",
@@ -8,12 +8,12 @@
     "static/media/AIRABU_small_2.png": "/lovely-cupid/static/media/AIRABU_small_2.2111c6114a0b6141d78b.png",
     "static/media/Lovehearts_XYZ.ttf": "/lovely-cupid/static/media/Lovehearts_XYZ.1604391656c2e73dc233.ttf",
     "index.html": "/lovely-cupid/index.html",
-    "main.80bcb4bd.css.map": "/lovely-cupid/static/css/main.80bcb4bd.css.map",
+    "main.5b5e571c.css.map": "/lovely-cupid/static/css/main.5b5e571c.css.map",
     "main.dcca3d6f.js.map": "/lovely-cupid/static/js/main.dcca3d6f.js.map",
     "787.49875e93.chunk.js.map": "/lovely-cupid/static/js/787.49875e93.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.80bcb4bd.css",
+    "static/css/main.5b5e571c.css",
     "static/js/main.dcca3d6f.js"
   ]
 }
