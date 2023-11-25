@@ -1,8 +1,9 @@
 import { Box, Button, Container, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 import "../styles/main.scss";
 import aira_big from "../assets/AIRABU_big.png";
+import { Dispatch } from "react";
 
-export default function Home() {
+export default function Home({dispatch}: {dispatch: Dispatch<QuizAction>}) {
   const isMobile = useMediaQuery("(max-width: 812px)");
   const theme = useTheme();
   
@@ -19,7 +20,9 @@ export default function Home() {
               <h1 style={{ margin: 0, padding: 0, marginTop: 10 }}>you can call me the Lovely~Cupid! Z</h1>
             </Box>
             <Typography component="p" sx={theme => ({ p: isMobile ? 0 : 2, borderRadius: theme.shape.borderRadius, color: "white", fontSize: "1.4rem" })}>As a super fan, I know a lot about the idols at Ensemble Square! I LOVE them so much! Since I also love love, I can determine which idol you'd be the most compatible with.</Typography>
-            <Button variant="contained" disableElevation>Start!</Button>
+            <Button variant="contained" disableElevation onClick={() => {
+              dispatch({ type: "go_mbti"});
+            }}>Start!</Button>
           </Stack>
           
         </Container>

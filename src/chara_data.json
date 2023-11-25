@@ -1,0 +1,492 @@
+[
+    {
+      "first_name": "Eichi",
+      "last_name": "Tenshouin",
+      "mbti": "INFJ",
+      "blood_type": "O",
+      "sun_sign": 9,
+      "moon_sign": 2,
+      "venus_sign": 9,
+      "card": "https://assets.enstars.link/assets/card_still_full1_2745_normal.png"
+    },
+    {
+      "first_name": "Wataru",
+      "last_name": "Hibiki",
+      "mbti": "ENTP",
+      "blood_type": "AB",
+      "sun_sign": 11,
+      "moon_sign": 8,
+      "venus_sign": 9,
+      "card": "https://assets.enstars.link/assets/card_still_full1_2887_evolution.png"
+    },
+    {
+      "first_name": "Yuzuru",
+      "last_name": "Fushimi",
+      "mbti": "ISFJ",
+      "blood_type": "A",
+      "sun_sign": 6,
+      "moon_sign": 5,
+      "venus_sign": 6,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3498_evolution.png"
+    },
+    {
+      "first_name": "Tori",
+      "last_name": "Himemiya",
+      "mbti": "ENFP",
+      "blood_type": "B",
+      "sun_sign": 9,
+      "moon_sign": 0,
+      "venus_sign": 8,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3232_evolution.png"
+    },
+    {
+      "first_name": "Hokuto",
+      "last_name": "Hidaka",
+      "mbti": "ISTJ",
+      "blood_type": "A",
+      "sun_sign": 8,
+      "moon_sign": 8,
+      "venus_sign": 9,
+      "card": "https://assets.enstars.link/assets/card_still_full1_2476_evolution.png"
+    },
+    {
+      "first_name": "Subaru",
+      "last_name": "Akehoshi",
+      "mbti": "ENFP",
+      "blood_type": "O",
+      "sun_sign": 3,
+      "moon_sign": 2,
+      "venus_sign": 1,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3399_evolution.png"
+    },
+    {
+      "first_name": "Makoto",
+      "last_name": "Yuuki",
+      "mbti": "INFP",
+      "blood_type": "O",
+      "sun_sign": 1,
+      "moon_sign": 2,
+      "venus_sign": 11,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3270_evolution.png"
+    },
+    {
+      "first_name": "Mao",
+      "last_name": "Isara",
+      "mbti": "ESFJ",
+      "blood_type": "O",
+      "sun_sign": 11,
+      "moon_sign": 11,
+      "venus_sign": 0,
+      "card": "https://assets.enstars.link/assets/card_still_full1_2980_evolution.png"
+    },
+    {
+      "first_name": "Chiaki",
+      "last_name": "Morisawa",
+      "mbti": "ENFJ",
+      "blood_type": "O",
+      "sun_sign": 5,
+      "moon_sign": 0,
+      "venus_sign": 7,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3463_evolution.png"
+    },
+    {
+      "first_name": "Kanata",
+      "last_name": "Shinkai",
+      "mbti": "INTP",
+      "blood_type": "B",
+      "sun_sign": 5,
+      "moon_sign": 4,
+      "venus_sign": 6,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3160_normal.png"
+    },
+    {
+      "first_name": "Tetora",
+      "last_name": "Nagumo",
+      "mbti": "ESFP",
+      "blood_type": "A",
+      "sun_sign": 2,
+      "moon_sign": 3,
+      "venus_sign": 4,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3183_evolution.png"
+    },
+    {
+      "first_name": "Midori",
+      "last_name": "Takamine",
+      "mbti": "ISFP",
+      "blood_type": "O",
+      "sun_sign": 5,
+      "moon_sign": 0,
+      "venus_sign": 4,
+      "card": "https://assets.enstars.link/assets/card_still_full1_2813_evolution.png"
+    },
+    {
+      "first_name": "Shinobu",
+      "last_name": "Sengoku",
+      "mbti": "INFP",
+      "blood_type": "AB",
+      "sun_sign": 2,
+      "moon_sign": 0,
+      "venus_sign": 4,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3391_normal.png"
+    },
+    {
+      "first_name": "Hiiro",
+      "last_name": "Amagi",
+      "mbti": "ESFJ",
+      "blood_type": "A",
+      "sun_sign": 9,
+      "moon_sign": 8,
+      "venus_sign": 8,
+      "card": "https://assets.enstars.link/assets/card_still_full1_2648_evolution.png"
+    },
+    {
+      "first_name": "Aira",
+      "last_name": "Shiratori",
+      "mbti": "INFP",
+      "blood_type": "B",
+      "sun_sign": 8,
+      "moon_sign": 8,
+      "venus_sign": 9,
+      "card": "https://assets.enstars.link/assets/card_still_full1_2809_evolution.png"
+    },
+    {
+      "first_name": "Mayoi",
+      "last_name": "Ayase",
+      "mbti": "ISFJ",
+      "blood_type": "O",
+      "sun_sign": 2,
+      "moon_sign": 6,
+      "venus_sign": 1,
+      "card": "https://assets.enstars.link/assets/card_still_full1_2484_normal.png"
+    },
+    {
+      "first_name": "Tatsumi",
+      "last_name": "Kazehaya",
+      "mbti": "INFJ",
+      "blood_type": "A",
+      "sun_sign": 9,
+      "moon_sign": 8,
+      "venus_sign": 10,
+      "card": "https://assets.enstars.link/assets/card_still_full1_2412_normal.png"
+    },
+    {
+      "first_name": "Nagisa",
+      "last_name": "Ran",
+      "mbti": "INTP",
+      "blood_type": "B",
+      "sun_sign": 7,
+      "moon_sign": 5,
+      "venus_sign": 8,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3290_normal.png"
+    },
+    {
+      "first_name": "Hiyori",
+      "last_name": "Tomoe",
+      "mbti": "ESFP",
+      "blood_type": "AB",
+      "sun_sign": 4,
+      "moon_sign": 11,
+      "venus_sign": 5,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3351_normal.png"
+    },
+    {
+      "first_name": "Ibara",
+      "last_name": "Saegusa",
+      "mbti": "ENTJ",
+      "blood_type": "A",
+      "sun_sign": 6,
+      "moon_sign": 4,
+      "venus_sign": 6,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3375_evolution.png"
+    },
+    {
+      "first_name": "Jun",
+      "last_name": "Sazanami",
+      "mbti": "ISTP",
+      "blood_type": "O",
+      "sun_sign": 4,
+      "moon_sign": 2,
+      "venus_sign": 4,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3464_evolution.png"
+    },
+    {
+      "first_name": "Hinata",
+      "last_name": "Aoi",
+      "mbti": "ENFJ",
+      "blood_type": "AB",
+      "sun_sign": 11,
+      "moon_sign": 11,
+      "venus_sign": 10,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3003_evolution.png"
+    },
+    {
+      "first_name": "Yuta",
+      "last_name": "Aoi",
+      "mbti": "ISFP",
+      "blood_type": "AB",
+      "sun_sign": 11,
+      "moon_sign": 11,
+      "venus_sign": 10,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3002_evolution.png"
+    },
+    {
+      "first_name": "Shu",
+      "last_name": "Itsuki",
+      "mbti": "INTJ",
+      "blood_type": "A",
+      "sun_sign": 7,
+      "moon_sign": 6,
+      "venus_sign": 8,
+      "card": "https://assets.enstars.link/assets/card_still_full1_2192_normal.png"
+    },
+    {
+      "first_name": "Mika",
+      "last_name": "Kagehira",
+      "mbti": "ISFJ",
+      "blood_type": "B",
+      "sun_sign": 9,
+      "moon_sign": 11,
+      "venus_sign": 9,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3329_normal.png"
+    },
+    {
+      "first_name": "Rinne",
+      "last_name": "Amagi",
+      "mbti": "ESTP",
+      "blood_type": "A",
+      "sun_sign": 1,
+      "moon_sign": 9,
+      "venus_sign": 1,
+      "card": "https://assets.enstars.link/assets/card_still_full1_2602_normal.png"
+    },
+    {
+      "first_name": "HiMERU",
+      "last_name": "",
+      "mbti": "INTP",
+      "blood_type": "O",
+      "sun_sign": 3,
+      "moon_sign": 8,
+      "venus_sign": 2,
+      "card": "https://assets.enstars.link/assets/card_still_full1_2494_normal.png"
+    },
+    {
+      "first_name": "Kohaku",
+      "last_name": "Oukawa",
+      "mbti": "ISTJ",
+      "blood_type": "B",
+      "sun_sign": 10,
+      "moon_sign": 3,
+      "venus_sign": 0,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3035_normal.png"
+    },
+    {
+      "first_name": "Niki",
+      "last_name": "Shiina",
+      "mbti": "ISFJ",
+      "blood_type": "AB",
+      "sun_sign": 6,
+      "moon_sign": 7,
+      "venus_sign": 7,
+      "card": "https://assets.enstars.link/assets/card_still_full1_2660_evolution.png"
+    },
+    {
+      "first_name": "Rei",
+      "last_name": "Sakuma",
+      "mbti": "INFJ",
+      "blood_type": "B",
+      "sun_sign": 7,
+      "moon_sign": 3,
+      "venus_sign": 6,
+      "card": "https://assets.enstars.link/assets/card_still_full1_2690_normal.png"
+    },
+    {
+      "first_name": "Kaoru",
+      "last_name": "Hakaze",
+      "mbti": "ESFP",
+      "blood_type": "B",
+      "sun_sign": 7,
+      "moon_sign": 8,
+      "venus_sign": 8,
+      "card": "https://assets.enstars.link/assets/card_still_full1_2409_evolution.png"
+    },
+    {
+      "first_name": "Koga",
+      "last_name": "Oogami",
+      "mbti": "ESTP",
+      "blood_type": "A",
+      "sun_sign": 3,
+      "moon_sign": 1,
+      "venus_sign": 2,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3475_normal.png"
+    },
+    {
+      "first_name": "Adonis",
+      "last_name": "Otogari",
+      "mbti": "ISFJ",
+      "blood_type": "A",
+      "sun_sign": 5,
+      "moon_sign": 7,
+      "venus_sign": 4,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3286_normal.png"
+    },
+    {
+      "first_name": "Tomoya",
+      "last_name": "Mashiro",
+      "mbti": "INFJ",
+      "blood_type": "A",
+      "sun_sign": 0,
+      "moon_sign": 9,
+      "venus_sign": 11,
+      "card": "https://assets.enstars.link/assets/card_still_full1_2553_evolution.png"
+    },
+    {
+      "first_name": "Nazuna",
+      "last_name": "Nito",
+      "mbti": "ENFJ",
+      "blood_type": "O",
+      "sun_sign": 1,
+      "moon_sign": 8,
+      "venus_sign": 1,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3125_normal.png"
+    },
+    {
+      "first_name": "Mitsuru",
+      "last_name": "Tenma",
+      "mbti": "ESFP",
+      "blood_type": "O",
+      "sun_sign": 5,
+      "moon_sign": 4,
+      "venus_sign": 4,
+      "card": "https://assets.enstars.link/assets/card_still_full1_2480_normal.png"
+    },
+    {
+      "first_name": "Hajime",
+      "last_name": "Shino",
+      "mbti": "ISFJ",
+      "blood_type": "AB",
+      "sun_sign": 3,
+      "moon_sign": 4,
+      "venus_sign": 5,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3176_normal.png"
+    },
+    {
+      "first_name": "Keito",
+      "last_name": "Hasumi",
+      "mbti": "ISTJ",
+      "blood_type": "A",
+      "sun_sign": 5,
+      "moon_sign": 6,
+      "venus_sign": 6,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3340_normal.png"
+    },
+    {
+      "first_name": "Kuro",
+      "last_name": "Kiryu",
+      "mbti": "ISFP",
+      "blood_type": "O",
+      "sun_sign": 10,
+      "moon_sign": 9,
+      "venus_sign": 9,
+      "card": "https://assets.enstars.link/assets/card_still_full1_2999_normal.png"
+    },
+    {
+      "first_name": "Souma",
+      "last_name": "Kanzaki",
+      "mbti": "ISTJ",
+      "blood_type": "A",
+      "sun_sign": 0,
+      "moon_sign": 10,
+      "venus_sign": 11,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3152_evolution.png"
+    },
+    {
+      "first_name": "Tsukasa",
+      "last_name": "Suou",
+      "mbti": "INTJ",
+      "blood_type": "A",
+      "sun_sign": 0,
+      "moon_sign": 8,
+      "venus_sign": 1,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3136_normal.png"
+    },
+    {
+      "first_name": "Leo",
+      "last_name": "Tsukinaga",
+      "mbti": "ENTP",
+      "blood_type": "O",
+      "sun_sign": 1,
+      "moon_sign": 0,
+      "venus_sign": 1,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3411_evolution.png"
+    },
+    {
+      "first_name": "Izumi",
+      "last_name": "Sena",
+      "mbti": "ISTJ",
+      "blood_type": "A",
+      "sun_sign": 7,
+      "moon_sign": 7,
+      "venus_sign": 8,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3271_evolution.png"
+    },
+    {
+      "first_name": "Ritsu",
+      "last_name": "Sakuma",
+      "mbti": "INTP",
+      "blood_type": "AB",
+      "sun_sign": 5,
+      "moon_sign": 2,
+      "venus_sign": 7,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3032_normal.png"
+    },
+    {
+      "first_name": "Arashi",
+      "last_name": "Narukami",
+      "mbti": "ESFJ",
+      "blood_type": "B",
+      "sun_sign": 11,
+      "moon_sign": 5,
+      "venus_sign": 0,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3298_normal.png"
+    },
+    {
+      "first_name": "Natsume",
+      "last_name": "Sakasaki",
+      "mbti": "ENTP",
+      "blood_type": "AB",
+      "sun_sign": 10,
+      "moon_sign": 5,
+      "venus_sign": 11,
+      "card": "https://assets.enstars.link/assets/card_still_full1_2782_normal.png"
+    },
+    {
+      "first_name": "Tsumugi",
+      "last_name": "Aoba",
+      "mbti": "ISFJ",
+      "blood_type": "O",
+      "sun_sign": 4,
+      "moon_sign": 5,
+      "venus_sign": 5,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3013_normal.png"
+    },
+    {
+      "first_name": "Sora",
+      "last_name": "Harukawa",
+      "mbti": "ENFP",
+      "blood_type": "B",
+      "sun_sign": 3,
+      "moon_sign": 10,
+      "venus_sign": 4,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3506_normal.png"
+    },
+    {
+      "first_name": "Madara",
+      "last_name": "Mikejima",
+      "mbti": "ENFJ",
+      "blood_type": "A",
+      "sun_sign": 1,
+      "moon_sign": 5,
+      "venus_sign": 2,
+      "card": "https://assets.enstars.link/assets/card_still_full1_3017_evolution.png"
+    }
+  ]
