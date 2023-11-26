@@ -1,13 +1,11 @@
 import { Accordion, AccordionDetails, AccordionSummary, Box, Container, Grid, Paper, Stack, Typography, useTheme } from "@mui/material";
 import charaData from "../chara_data.json";
-import { useState } from "react";
 import { BLOOD_MAP, HOROSCOPE_MAP, MBTI_MAP } from "../utility";
 import "../styles/main.scss";
 import { ExpandMore, Favorite } from "@mui/icons-material";
 
 export default function Results({state}: {state: QuizState}) {
     const theme = useTheme();
-    const [showAnimation, setShowAnimation] = useState(true);
 
     function computeResults(userData: UserInfo) {
         const changingData: CharacterInfo[] = charaData;
