@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/lovely-cupid/static/css/main.1290e6f5.css",
-    "main.js": "/lovely-cupid/static/js/main.dcca3d6f.js",
+    "main.css": "/lovely-cupid/static/css/main.028213f6.css",
+    "main.js": "/lovely-cupid/static/js/main.b2abaf4b.js",
     "static/js/787.49875e93.chunk.js": "/lovely-cupid/static/js/787.49875e93.chunk.js",
     "static/media/AIRABU_big.png": "/lovely-cupid/static/media/AIRABU_big.ce800b46a4ba628d48b5.png",
     "static/media/AIRABU_small_1.png": "/lovely-cupid/static/media/AIRABU_small_1.5998658836625234a74b.png",
     "static/media/AIRABU_small_2.png": "/lovely-cupid/static/media/AIRABU_small_2.2111c6114a0b6141d78b.png",
     "static/media/Lovehearts_XYZ.ttf": "/lovely-cupid/static/media/Lovehearts_XYZ.1604391656c2e73dc233.ttf",
     "index.html": "/lovely-cupid/index.html",
-    "main.1290e6f5.css.map": "/lovely-cupid/static/css/main.1290e6f5.css.map",
-    "main.dcca3d6f.js.map": "/lovely-cupid/static/js/main.dcca3d6f.js.map",
+    "main.028213f6.css.map": "/lovely-cupid/static/css/main.028213f6.css.map",
+    "main.b2abaf4b.js.map": "/lovely-cupid/static/js/main.b2abaf4b.js.map",
     "787.49875e93.chunk.js.map": "/lovely-cupid/static/js/787.49875e93.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1290e6f5.css",
-    "static/js/main.dcca3d6f.js"
+    "static/css/main.028213f6.css",
+    "static/js/main.b2abaf4b.js"
   ]
 }
