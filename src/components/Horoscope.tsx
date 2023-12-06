@@ -15,7 +15,7 @@ export default function Horoscope({state, dispatch}: {state: QuizState, dispatch
                 venus_sign: +venusSign - 1
             })})
         }
-    }, [sunSign, moonSign, venusSign]);
+    }, [sunSign, moonSign, venusSign, dispatch]);
 
     function SunSign() {
         const handleChange = (event: SelectChangeEvent, child: ReactNode) => {

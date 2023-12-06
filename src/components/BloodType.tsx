@@ -13,7 +13,7 @@ export default function BloodType({dispatch}: {dispatch: Dispatch<QuizAction>}) 
         if (value.length > 0) {
             dispatch({type: "set_bloodType", payload: value});
         }
-    }, [value])
+    }, [dispatch, value])
 
     return (
         <FormControl fullWidth sx={{mt: 3, zIndex: 3}}>

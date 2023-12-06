@@ -1,7 +1,7 @@
 import { Button, Container, CssBaseline, Link, ThemeProvider, createTheme } from '@mui/material';
 import "./styles/main.scss"
 import { pink } from '@mui/material/colors';
-import { Fragment, useEffect, useReducer } from 'react';
+import { Fragment, useReducer } from 'react';
 import Home from './components/Home';
 import Question from './components/Question';
 import Mbti from './components/Mbti';
