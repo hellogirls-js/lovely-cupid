@@ -57,7 +57,7 @@ export default function Horoscope({state, dispatch}: {state: QuizState, dispatch
         }
 
         return (
-            <FormControl fullWidth sx={{ mt: 3 }}>
+            <FormControl fullWidth sx={{ mt: 3, mb: 3 }}>
                 <InputLabel id="moon-sign-id">
                     Venus sign
                 </InputLabel>

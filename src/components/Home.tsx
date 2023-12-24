@@ -10,7 +10,7 @@ export default function Home({dispatch}: {dispatch: Dispatch<QuizAction>}) {
   
   return (
     <Box sx={{ width: "100vw", height: "100vh", boxSizing: "border-box", position: "relative", display: "flex", alignItems: "center", overflow: "hidden" }}>
-      <Container sx={theme => ({ overflow: "hidden", height: "100vh", maxHeight: "100vh", position: "relative", borderRadius: isMobile ? 0 : theme.shape.borderRadius, 
+        <Container id="home-main" sx={theme => ({ pb: isMobile ? 2 : 0, overflowY: isMobile ? "auto" : "hidden", overflow: isMobile ? "auto" : "hidden", height: "100vh", maxHeight: "100vh", position: "relative", borderRadius: isMobile ? 0 : theme.shape.borderRadius, 
         "& .MuiContainer-root": {
           "@media (min-width: 1200px)": {
             maxWidth: "none",
@@ -29,11 +29,10 @@ export default function Home({dispatch}: {dispatch: Dispatch<QuizAction>}) {
               <ListItem>- Blood type (optional)</ListItem>
               <ListItem>- Horoscope information (required, must know your birthday and birth location)</ListItem>
             </List>
-            <Button variant="contained" disableElevation onClick={() => {
+            <Button variant="contained" onClick={() => {
               dispatch({ type: "go_mbti"});
             }}>Start!</Button>
           </Stack>
-          
         </Container>
         <Box sx={{ height: "100%", position: "absolute", top: isMobile ? "20%" : 0, left: isMobile ? "20%" : "30%", zIndex: 1 }} id="aira-container">
           <img src={isMobile ? aira_small : aira_big} alt="aira" style={{ height: isMobile ? "10%" : "100%", filter: isMobile ? "none" : `drop-shadow(20px 20px #fff)`, userSelect: "none", pointerEvents: "none" }} />

@@ -1,4 +1,4 @@
-import { Button, Container, CssBaseline, Link, ThemeProvider, createTheme } from '@mui/material';
+import { Button, Container, CssBaseline, Link, ThemeProvider, createTheme, useMediaQuery } from '@mui/material';
 import "./styles/main.scss"
 import { pink } from '@mui/material/colors';
 import { Fragment, useReducer } from 'react';
@@ -113,6 +113,8 @@ function App() {
     }
   });
 
+  const isMobile = useMediaQuery("(max-width: 812px)");
+
   function onNextClick(state: QuizState) {
     if (state.showMbti) {
       dispatch({ type: "go_bloodType" });
@@ -135,7 +137,7 @@ function App() {
         </Fragment>} options={<Horoscope state={state} dispatch={dispatch} />} />}
         {state.showResults && <Results state={state} />}
         <Container>
-          {state.showNextButton && <Button variant="contained" onClick={() => onNextClick(state)} sx={{ mt: 5, width: "100%" }}>Next</Button>}
+          {state.showNextButton && <Button variant="contained" onClick={() => onNextClick(state)} sx={{ mt: 5, mb: isMobile ? 5 : 0, width: "100%" }}>Next</Button>}
         </Container>
       </ThemeProvider>
     </Fragment>

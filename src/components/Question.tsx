@@ -5,7 +5,7 @@ import { ReactElement } from "react";
 
 export default function Question({question, description, mood = "happy", options}: {question: string, description?: string | ReactElement, mood?: "happy" | "serious", options: any}) {
   return (
-    <Container sx={{ mt: 15, position: "relative", height: "60vh" }}>
+    <Container sx={{ mt: 15, position: "relative", minHeight: "60vh" }}>
       <Box position="relative">
         <Box position="absolute" top={-100} className="mini-aira"><img src={mood === "happy" ? aira_happy : aira_serious} alt="aira" width={150} style={{ pointerEvents: "none", userSelect: "none"}} /></Box>
         <Paper sx={{ p: 4, pt: 8, pl: 8, fontSize: "1.4rem" }}>
