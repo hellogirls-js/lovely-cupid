@@ -39,10 +39,12 @@
 
 @keyframes fall {
   0% {
+    opacity: 1;
     transform: translateY(0vh);
   }
   100% {
-    transform: translateY(120vh);
+    opacity: 0;
+    transform: translateY(100vh);
   }
 }
 
@@ -104,13 +106,23 @@
 
     h1 {
       font-family: $heading-font;
-      font-size: clamp(2rem, 5vw, 3rem);
+      font-size: clamp(1.5rem, 5vw, 3rem);
       color: $base;
       text-shadow: 3px 3px 0px $blue;
       font-weight: 900;
       margin: 0;
       margin-top: 5%;
+      margin-left: 10px;
       animation: float 2s ease-in-out 0s infinite normal forwards;
+      flex-grow: 1;
+      z-index: 3;
+
+      @media screen and (max-width: 812px) {
+        margin-top: 22%;
+        position: absolute;
+        left: 0;
+        width: 100%;
+      }
     }
 
     #aira {
@@ -124,6 +136,16 @@
         width: auto;
         filter: drop-shadow(-10px 0px 0px $base);
       }
+
+      @media screen and (max-width: 812px) {
+        position: absolute;
+        right: -30vw;
+      }
+    }
+
+    @media screen and (max-width: 812px) {
+      overflow: hidden;
+      display: block;
     }
   }
 
@@ -142,6 +164,7 @@
         color: $blue;
 
         .page-desc {
+          margin: auto;
           margin-top: -3vh;
           z-index: 5;
           width: 75%;
@@ -153,6 +176,11 @@
 
           &.right {
             text-align: right;
+          }
+
+          @media screen and (max-width: 800px) {
+            margin-top: 0;
+            margin: auto;
           }
         }
 
@@ -173,9 +201,14 @@
           text-shadow: -1px -1px 0 $base, 1px -1px 0 $base, -1px 1px 0 $base,
             1px 1px 0 $base;
           transition: transform 0.2s;
+          margin: auto;
 
           span {
             margin-top: -3vw;
+
+            @media screen and (max-width: 800px) {
+              position: absolute;
+            }
           }
 
           &:hover {
@@ -206,27 +239,35 @@
             fill: lighten($color: $red, $amount: 20%);
             filter: drop-shadow(0px 2px 2px #00000022);
 
-            @media screen and (orientation: portrait) {
-              left: 12.5vw;
+            @media screen and (max-width: 800px) {
+              width: 20vh;
+              height: 20vh;
             }
           }
 
-          @media screen and (orientation: portrait) {
-            align-items: center;
-            justify-content: flex-start;
+          @media screen and (max-width: 800px) {
+            margin: auto;
+            width: 20vh;
+            height: 20vh;
           }
         }
 
         @media screen and (orientation: portrait) {
+          box-sizing: border-box;
+          padding: 5px;
+          align-items: center;
           justify-content: center;
+          margin: 3vh 0px;
         }
       }
 
       @media screen and (orientation: portrait) {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
+        display: block;
       }
+    }
+
+    @media screen and (max-width: 800px) {
+      overflow: hidden;
     }
   }
 }

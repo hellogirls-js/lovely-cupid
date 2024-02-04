@@ -46,14 +46,6 @@ export default function Home() {
             </div>
           ))}
         </section>
-        {/* <section id="bars">
-          {[0, 1, 2, 3, 4, 5, 6, 7].map((bar) => (
-            <div
-              id={`bar-${bar}`}
-              className={clsx("bar", bar % 2 === 0 ? "pink" : "blue")}
-            />
-          ))}
-        </section> */}
       </main>
       <Footer />
     </>

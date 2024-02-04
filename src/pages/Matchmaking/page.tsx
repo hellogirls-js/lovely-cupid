@@ -108,32 +108,6 @@ function SetPage({ pageIndex }: { pageIndex: number }): React.ReactElement {
 }
 
 export default function Matchmaking() {
-  // const [state, dispatch] = React.useReducer(reducer, {
-  //   showHome: true,
-  //   showMbti: false,
-  //   showBloodType: false,
-  //   showHoroscope: false,
-  //   showResults: false,
-  //   showNextButton: false,
-  //   userInfo: {
-  //     blood_type: undefined,
-  //     mbti: undefined,
-  //     sun_sign: "",
-  //     moon_sign: "",
-  //     venus_sign: ""
-  //   }
-  // });
-
-  // function onNextClick(state: QuizState) {
-  //   if (state.showMbti) {
-  //     dispatch({ type: "go_bloodType" });
-  //   } else if (state.showBloodType) {
-  //     dispatch({ type: "go_horoscope" });
-  //   } else if (state.showHoroscope) {
-  //     dispatch({ type: "showResults" });
-  //   }
-  // }
-
   const [pageIndex, setPageIndex] = React.useState(0);
 
   return (
