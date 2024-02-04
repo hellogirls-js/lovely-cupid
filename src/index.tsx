@@ -1,15 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import "normalize.css";
+import reportWebVitals from "./reportWebVitals";
+import {
+  Link,
+  NavLink,
+  Route,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from "react-router-dom";
+import Matchmaking from "./pages/Matchmaking/page";
+import Home from "./pages/Home";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Home />}>
+      <Route path="matchmaking" element={<Matchmaking />} />
+    </Route>
+  )
+);
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
