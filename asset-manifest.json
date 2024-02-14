@@ -1,19 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.757bbcb6.css",
-    "main.js": "/static/js/main.94e9573e.js",
+    "main.css": "/static/css/main.098944d8.css",
+    "main.js": "/static/js/main.d1cf4ae5.js",
     "static/js/787.49875e93.chunk.js": "/static/js/787.49875e93.chunk.js",
+    "static/media/tabler-icons.eot": "/static/media/tabler-icons.e04ac3fa2da8051e7826.eot",
+    "static/media/tabler-icons.ttf?v2.47.0": "/static/media/tabler-icons.1a729c39533ace606587.ttf",
+    "static/media/tabler-icons.woff?": "/static/media/tabler-icons.932f146a13e207a06fc9.woff",
+    "static/media/tabler-icons.woff2?v2.47.0": "/static/media/tabler-icons.64a5f51fd347452e8f75.woff2",
     "static/media/AIRABU_big.png": "/static/media/AIRABU_big.ce800b46a4ba628d48b5.png",
     "static/media/AIRABU_small_1.png": "/static/media/AIRABU_small_1.5998658836625234a74b.png",
-    "static/media/AIRABU_small_2.png": "/static/media/AIRABU_small_2.2111c6114a0b6141d78b.png",
-    "static/media/Lovehearts_XYZ.ttf": "/static/media/Lovehearts_XYZ.1604391656c2e73dc233.ttf",
     "index.html": "/index.html",
-    "main.757bbcb6.css.map": "/static/css/main.757bbcb6.css.map",
-    "main.94e9573e.js.map": "/static/js/main.94e9573e.js.map",
+    "main.098944d8.css.map": "/static/css/main.098944d8.css.map",
+    "main.d1cf4ae5.js.map": "/static/js/main.d1cf4ae5.js.map",
     "787.49875e93.chunk.js.map": "/static/js/787.49875e93.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.757bbcb6.css",
-    "static/js/main.94e9573e.js"
+    "static/css/main.098944d8.css",
+    "static/js/main.d1cf4ae5.js"
   ]
 }
