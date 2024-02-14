@@ -36,11 +36,11 @@ export function charaCompatibility(
   let value =
     sunValue * MULTIPLIER +
     moonValue * MULTIPLIER +
-    venusValue * (200 / 7 / 100) +
+    venusValue * MULTIPLIER +
     mbtiValue * MULTIPLIER +
-    bloodValue * (200 / 7 / 100) +
-    flavorValue * (50 / 7 / 100) +
-    colorValue * (50 / 7 / 100);
+    bloodValue * MULTIPLIER +
+    flavorValue * MULTIPLIER +
+    colorValue * MULTIPLIER;
 
   return +value.toFixed(1);
 }
@@ -100,11 +100,11 @@ export function computeCompatibility(
     let value =
       sunValue * MULTIPLIER +
       moonValue * MULTIPLIER +
-      venusValue * (200 / amtOfInfo / 100) +
+      venusValue * MULTIPLIER +
       mbtiValue * MULTIPLIER +
-      bloodValue * (200 / amtOfInfo / 100) +
-      flavorValue * (50 / amtOfInfo / 100) +
-      colorValue * (50 / amtOfInfo / 100);
+      bloodValue * MULTIPLIER +
+      flavorValue * MULTIPLIER +
+      colorValue * MULTIPLIER;
     chara.compat_val = +value.toFixed(2);
   });
 
@@ -172,10 +172,10 @@ export function computeSimilarity(
 
     let value =
       sunValue * MULTIPLIER +
-      moonValue * (200 / amtOfInfo / 100) +
-      venusValue * (50 / amtOfInfo / 100) +
-      mbtiValue * (200 / amtOfInfo / 100) +
-      bloodValue * (50 / amtOfInfo / 100) +
+      moonValue * MULTIPLIER +
+      venusValue * MULTIPLIER +
+      mbtiValue * MULTIPLIER +
+      bloodValue * MULTIPLIER +
       flavorValue * MULTIPLIER +
       colorValue * MULTIPLIER;
     chara.similar_val = +value.toFixed(2);
