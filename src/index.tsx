@@ -3,12 +3,12 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import "normalize.css";
 import reportWebVitals from "./reportWebVitals";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 import Matchmaking from "./pages/Matchmaking/page";
 import Home from "./pages/Home";
 import Compatibility from "./pages/Compatibility/page";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Home />,
