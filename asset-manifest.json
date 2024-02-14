@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.098944d8.css",
+    "main.css": "/static/css/main.3ad90d59.css",
     "main.js": "/static/js/main.d1cf4ae5.js",
     "static/js/787.49875e93.chunk.js": "/static/js/787.49875e93.chunk.js",
     "static/media/tabler-icons.eot": "/static/media/tabler-icons.e04ac3fa2da8051e7826.eot",
@@ -10,12 +10,12 @@
     "static/media/AIRABU_big.png": "/static/media/AIRABU_big.ce800b46a4ba628d48b5.png",
     "static/media/AIRABU_small_1.png": "/static/media/AIRABU_small_1.5998658836625234a74b.png",
     "index.html": "/index.html",
-    "main.098944d8.css.map": "/static/css/main.098944d8.css.map",
+    "main.3ad90d59.css.map": "/static/css/main.3ad90d59.css.map",
     "main.d1cf4ae5.js.map": "/static/js/main.d1cf4ae5.js.map",
     "787.49875e93.chunk.js.map": "/static/js/787.49875e93.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.098944d8.css",
+    "static/css/main.3ad90d59.css",
     "static/js/main.d1cf4ae5.js"
   ]
 }
