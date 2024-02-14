@@ -3,24 +3,25 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import "normalize.css";
 import reportWebVitals from "./reportWebVitals";
-import {
-  Link,
-  NavLink,
-  Route,
-  RouterProvider,
-  createBrowserRouter,
-  createRoutesFromElements,
-} from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Matchmaking from "./pages/Matchmaking/page";
 import Home from "./pages/Home";
+import Compatibility from "./pages/Compatibility/page";
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<Home />}>
-      <Route path="matchmaking" element={<Matchmaking />} />
-    </Route>
-  )
-);
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/matchmaking",
+    element: <Matchmaking />,
+  },
+  {
+    path: "/compatibility",
+    element: <Compatibility />,
+  },
+]);
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

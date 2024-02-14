@@ -1,5 +1,15 @@
 @use "vars" as *;
 @use "sass:color";
+@use "sass:math";
+@use "sass:list";
+
+@function create_random_list() {
+  $list: ();
+  @for $i from 1 to 30 {
+    $list: list.append($list, math.random(100));
+  }
+  @return $list;
+}
 
 a:link,
 a:visited {
@@ -12,6 +22,7 @@ footer {
   top: 10px;
   left: 10px;
   opacity: 0.5;
+  z-index: 5;
 }
 
 h1,
@@ -26,4 +37,47 @@ body {
     transparent 65%,
     color.adjust($color: $red, $alpha: -0.9)
   );
+  background-repeat: no-repeat;
+  color: $text;
+}
+
+p {
+  line-height: 1.4;
+}
+
+#falling-hearts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -10;
+
+  $heart_amt: 10;
+  $partical-position-list: create_random_list();
+
+  .heart {
+    position: absolute;
+    top: 0;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+
+    @for $i from 0 to $heart_amt {
+      &:nth-child(#{$i}) {
+        left: nth($list: $partical-position-list, $n: $i + 1) * 1%;
+        animation-delay: #{$i * 500}ms;
+        animation-duration: #{math.random($limit: 4) * 5}s;
+      }
+    }
+
+    .tabler-icon {
+      stroke-width: 0;
+      fill: lighten($color: $red, $amount: 20%);
+      animation: spin 2s ease-in-out 0s infinite normal forwards;
+    }
+  }
 }

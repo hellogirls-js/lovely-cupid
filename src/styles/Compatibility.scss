@@ -1,0 +1,178 @@
+@use "vars" as *;
+
+@keyframes bouncy {
+  0% {
+    transform: translateY(0px);
+  }
+  10% {
+    transform: translateY(-5px);
+  }
+  15% {
+    transform: translateY(-10px);
+  }
+  20% {
+    transform: translateY(-5px);
+  }
+  25% {
+    transform: translateY(0px);
+  }
+  30% {
+    transform: translateY(-5px);
+  }
+  35% {
+    transform: translateY(-10px);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  45% {
+    transform: translateY(0px);
+  }
+}
+
+#compatibility {
+  width: 94vw;
+  margin: auto;
+  max-width: 960px;
+  font-size: 1vw;
+  margin-top: 2em;
+
+  h1 {
+    margin: 0;
+    line-height: 1;
+    color: $blue;
+    user-select: text;
+    font-size: 5em;
+    font-style: italic;
+    font-weight: 900;
+    z-index: 5;
+    text-shadow: $text-outline;
+
+    @media screen and (orientation: portrait) {
+      width: 100%;
+      font-size: 4em;
+    }
+  }
+
+  #heading {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+    .tabler-icon {
+      color: $blue;
+      width: 2em;
+      height: 2em;
+    }
+
+    img {
+      width: 7em;
+      height: auto;
+      user-select: none;
+      pointer-events: none;
+      animation: bouncy 2s linear 1s infinite normal;
+    }
+
+    @media screen and (orientation: portrait) {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 810px) and (orientation: landscape) {
+    font-size: 1.5vw;
+  }
+
+  @media screen and (orientation: portrait) {
+    font-size: 2.1vh;
+    overflow: auto;
+  }
+
+  @media screen and (orientation: landscape) {
+    max-height: 100vh;
+  }
+
+  #compat-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5em;
+    margin-top: 4em;
+
+    @media screen and (orientation: portrait) {
+      display: block;
+      margin-top: 3em;
+    }
+
+    .dropdown {
+      flex-basis: 33%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .avatar-container {
+        width: 7em;
+        height: 7em;
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: lighten($color: $red, $amount: 20%);
+        color: lighten($color: $red, $amount: 5%);
+        box-shadow: 0px 5px 0px lighten($color: $red, $amount: 5%);
+
+        .tabler-icon {
+          transform: rotate(-10deg);
+        }
+
+        img {
+          width: 28em;
+          height: auto;
+          margin-top: 3.5em;
+        }
+      }
+    }
+
+    #compat-value {
+      position: relative;
+      font-family: $heading-font;
+      font-size: 3em;
+      font-weight: 700;
+      font-style: italic;
+      color: white;
+      text-shadow: $text-outline-red;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-basis: 4em;
+
+      #value-heart {
+        position: absolute;
+        top: -100%;
+        left: 0;
+        z-index: -1;
+        transition: transform 0.5s;
+        transform-origin: center;
+
+        .tabler-icon {
+          width: 4em;
+          height: 4em;
+          fill: $red;
+          stroke-width: 0;
+          transition: fill 0.5s;
+        }
+      }
+
+      @media screen and (orientation: portrait) {
+        height: 4em;
+
+        #value-heart {
+          top: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+}

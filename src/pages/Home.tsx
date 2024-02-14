@@ -1,9 +1,9 @@
-import "../styles/main.scss";
-import "../styles/Home.scss";
-import aira from "../assets/AIRABU_big.png";
+import "styles/main.scss";
+import "styles/Home.scss";
+import aira from "assets/AIRABU_big.png";
 import { IconHeart } from "@tabler/icons-react";
-import { clsx } from "clsx";
-import Footer from "../components/Footer";
+import Footer from "components/Footer";
+import FallingHearts from "components/FallingHearts";
 
 export default function Home() {
   return (
@@ -18,20 +18,20 @@ export default function Home() {
         <section className="home-section" id="bottom">
           <div id="button-links">
             <div className="button-container">
-              <div className="button" id="button-rot-left">
+              <a className="button" id="button-rot-left" href="/matchmaking">
                 <span>Matchmaking</span>
                 <IconHeart />
-              </div>
+              </a>
               <div className="page-desc left">
                 Find your personality type, along with your most compatible
                 type!
               </div>
             </div>
             <div className="button-container">
-              <div className="button" id="button-rot-right">
+              <a className="button" id="button-rot-right" href="/compatibility">
                 <span>Compatibility</span>
                 <IconHeart />
-              </div>
+              </a>
               <div className="page-desc right">
                 See how compatible a pair of characters are with a classic love
                 calculator!
@@ -39,13 +39,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="falling-hearts">
-          {Array.from(new Array(10).keys()).map((heart) => (
-            <div id={`heart-${heart}`} className={clsx("heart", heart)}>
-              <IconHeart size={30} />
-            </div>
-          ))}
-        </section>
+        <FallingHearts />
       </main>
       <Footer />
     </>
