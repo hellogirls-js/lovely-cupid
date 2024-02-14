@@ -36,9 +36,9 @@ export function charaCompatibility(
   let value =
     sunValue * MULTIPLIER +
     moonValue * MULTIPLIER +
-    venusValue * (150 / 7 / 100) +
+    venusValue * (200 / 7 / 100) +
     mbtiValue * MULTIPLIER +
-    bloodValue * (150 / 7 / 100) +
+    bloodValue * (200 / 7 / 100) +
     flavorValue * (50 / 7 / 100) +
     colorValue * (50 / 7 / 100);
 
@@ -100,9 +100,9 @@ export function computeCompatibility(
     let value =
       sunValue * MULTIPLIER +
       moonValue * MULTIPLIER +
-      venusValue * (150 / amtOfInfo / 100) +
+      venusValue * (200 / amtOfInfo / 100) +
       mbtiValue * MULTIPLIER +
-      bloodValue * (150 / amtOfInfo / 100) +
+      bloodValue * (200 / amtOfInfo / 100) +
       flavorValue * (50 / amtOfInfo / 100) +
       colorValue * (50 / amtOfInfo / 100);
     chara.compat_val = +value.toFixed(2);
@@ -172,9 +172,9 @@ export function computeSimilarity(
 
     let value =
       sunValue * MULTIPLIER +
-      moonValue * (150 / amtOfInfo / 100) +
+      moonValue * (200 / amtOfInfo / 100) +
       venusValue * (50 / amtOfInfo / 100) +
-      mbtiValue * (150 / amtOfInfo / 100) +
+      mbtiValue * (200 / amtOfInfo / 100) +
       bloodValue * (50 / amtOfInfo / 100) +
       flavorValue * MULTIPLIER +
       colorValue * MULTIPLIER;
