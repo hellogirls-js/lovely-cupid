@@ -1,0 +1,524 @@
+@use "vars" as *;
+@use "sass:math";
+@use "sass:color";
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate2 {
+  from {
+    transform: rotate(-120deg);
+  }
+  to {
+    transform: rotate(240deg);
+  }
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+#matchmaking {
+  position: relative;
+  font-size: 1vw;
+  height: 100vh;
+  overflow-x: hidden;
+
+  @media screen and (max-width: 810px) and (orientation: landscape) {
+    font-size: 1.5vw;
+  }
+
+  h1 {
+    margin: 0;
+    line-height: 1;
+    color: $blue;
+    user-select: text;
+    font-size: 5em;
+    width: 100%;
+    font-style: italic;
+    font-weight: 900;
+    z-index: 5;
+    text-shadow: $text-outline;
+
+    @media screen and (orientation: portrait) {
+      width: 100%;
+      font-size: 4em;
+    }
+  }
+
+  #question-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    height: calc(100% - 2em);
+    width: 40em;
+    z-index: 5;
+    margin-top: 2em;
+    margin-left: 6em;
+    padding: 2em 0em 4em 0em;
+    overflow: hidden;
+
+    #quiz {
+      width: 100%;
+      flex-grow: 1;
+
+      section {
+        & .radio-button:nth-child(even) {
+          transform: rotate(2deg);
+        }
+
+        & .radio-button:nth-child(odd) {
+          transform: rotate(-2deg);
+        }
+      }
+
+      #blood-type {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 0.5em;
+
+        #blood-idk {
+          position: relative;
+          flex-basis: 100%;
+          flex-grow: 1;
+          height: 2em;
+
+          label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            background-color: lighten($color: $red, $amount: 15%);
+            border-radius: 12px;
+            color: $blue;
+            text-shadow: -1px -1px 0 $base, 1px -1px 0 $base, -1px 1px 0 $base,
+              1px 1px 0 $base;
+            font-weight: 700;
+          }
+
+          input[type="radio"] {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+          }
+
+          input[type="radio"]:checked + label {
+            background-color: $blue;
+            color: $base;
+            text-shadow: none;
+          }
+        }
+      }
+
+      #flavor {
+        width: 100%;
+        gap: 0.5em;
+        height: auto;
+        box-sizing: border-box;
+        padding: 2em 0em;
+      }
+    }
+
+    @media screen and (orientation: portrait) {
+      width: 100%;
+      height: auto;
+      margin: 0;
+      margin-top: 2em;
+      padding: 0.5em;
+      overflow: auto;
+    }
+
+    #description {
+      z-index: 5;
+    }
+
+    #nav-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      #next-question-button {
+        justify-self: flex-end;
+      }
+
+      @media screen and (orientation: portrait) {
+        margin-top: 2em;
+      }
+    }
+  }
+
+  #loading {
+    margin-top: 2em;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 80vw;
+      height: auto;
+      user-select: none;
+      pointer-events: none;
+    }
+  }
+
+  #results-container {
+    width: 90vw;
+    max-width: 960px;
+    margin: auto;
+    margin-top: 2em;
+    z-index: 5;
+
+    h1 {
+      z-index: 5;
+      width: 100% !important;
+      text-align: center;
+    }
+
+    #cards-desktop {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 4em;
+      position: relative;
+      z-index: 5;
+
+      .result-card {
+        width: 20em;
+        position: relative;
+
+        strong {
+          font-size: 1.25em;
+        }
+
+        .card-container {
+          margin-top: 2em;
+          aspect-ratio: 3 / 4;
+          overflow: hidden;
+          border-radius: 0.5em;
+          display: flex;
+          justify-content: center;
+          border: 2em solid white;
+          box-shadow: 0px 2px 2px #00000033;
+
+          &#you {
+            transform: rotate(-5deg);
+          }
+
+          &#bae {
+            transform: rotate(5deg);
+          }
+        }
+
+        .special-text {
+          width: 100%;
+          position: absolute;
+          bottom: 0.1em;
+          z-index: 7;
+          font-size: 3em;
+          line-height: 0.7;
+          font-family: $heading-font;
+          text-shadow: $text-outline;
+          font-weight: 900;
+          font-style: italic;
+          color: $blue;
+        }
+
+        img {
+          height: 100%;
+          pointer-events: none;
+        }
+      }
+
+      @media screen and (orientation: portrait) and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    #cards-mobile {
+      width: 100%;
+      max-width: 960px;
+      margin: auto;
+      margin-top: 2em;
+      aspect-ratio: 3/4;
+
+      #result-card-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        #flip-notice {
+          position: absolute;
+          top: 0.5em;
+          right: 0.5em;
+          z-index: 12;
+          width: 4em;
+          height: 4em;
+          background: #000000aa;
+          color: #fff;
+          font-variant: small-caps;
+          border-radius: 8px;
+          padding: 0.25em;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          font-weight: 700;
+          box-shadow: 0px 2px 2px #00000066;
+        }
+
+        #result-card {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          transition: transform 0.8s;
+          transform-style: preserve-3d;
+          transform: perspective(1000px) rotateY(var(--rotate-y, 0));
+
+          &.flip {
+            --rotate-y: 180deg;
+          }
+
+          .card-side {
+            position: absolute;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+
+            .card-name {
+              position: absolute;
+              bottom: 0.25em;
+              left: 0.25em;
+              font-family: $heading-font;
+              font-size: 4em;
+              line-height: 0.6;
+              font-weight: 900;
+              color: $blue;
+              text-shadow: $text-outline;
+              font-style: italic;
+            }
+
+            .card-img {
+              width: 100%;
+              height: 100%;
+              overflow: hidden;
+              border: 1em solid white;
+              box-sizing: border-box;
+              box-shadow: 0px 2px 2px #00000033;
+              border-radius: 0.5em;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 0.5em;
+              img {
+                height: 100%;
+                pointer-events: none;
+              }
+            }
+
+            &#card-back {
+              transform: rotateY(180deg);
+              backface-visibility: hidden;
+              -webkit-backface-visibility: hidden;
+            }
+          }
+        }
+      }
+
+      @media screen and (orientation: landscape) and (min-width: 768px) {
+        display: none;
+      }
+    }
+
+    #silly {
+      text-align: center;
+      margin-bottom: 4em;
+      h2 {
+        font-family: $heading-font;
+        font-weight: 700;
+        color: $blue;
+        text-shadow: $text-outline;
+        margin-top: 4em;
+        font-size: 3em;
+      }
+    }
+
+    #total-compatibility {
+      margin: 12em 0em;
+
+      #compat-heart {
+        font-size: 5em;
+        margin-top: 2em;
+        font-family: $heading-font;
+        font-weight: 900;
+        color: $base;
+        text-shadow: $text-outline-red;
+        font-style: italic;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        #compat-heart-icon {
+          position: absolute;
+          .tabler-icon {
+            fill: $red;
+            stroke-width: 0;
+            width: 5em;
+            height: 5em;
+          }
+        }
+      }
+    }
+
+    #other-results {
+      h2 {
+        font-family: $heading-font;
+        font-weight: 900;
+        color: $blue;
+        text-shadow: $text-outline;
+        margin-top: 4em;
+        font-size: 3em;
+      }
+
+      #table {
+        background-color: #fff;
+        box-shadow: 0px 2px 2px #00000033;
+        padding: 0.5em 1em;
+        border-radius: 1em;
+
+        .row {
+          margin: 1em 0em;
+          display: flex;
+          align-items: center;
+          gap: 2em;
+
+          .name {
+            font-weight: bold;
+          }
+
+          .divider {
+            flex-grow: 1;
+            height: 0.2em;
+            border-top: 0.2em dotted lighten($color: $text, $amount: 10%);
+          }
+        }
+      }
+    }
+
+    #final-nav {
+      padding: 4em;
+      margin-bottom: 2em;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      button {
+        display: flex;
+        gap: 0.5em;
+        align-items: center;
+        color: $blue;
+        font-family: $heading-font;
+        font-weight: 900;
+        font-style: italic;
+        font-size: 2em;
+        padding: 0.5em;
+        border: none;
+        border-bottom: 3px solid
+          lighten(
+            $color: color.adjust($color: $red, $saturation: -10),
+            $amount: 5%
+          );
+        background-color: lighten($color: $red, $amount: 15%);
+        text-shadow: $text-outline;
+        border-radius: 50px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  #heart-bg {
+    $HEART_SIZE: 60em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: $HEART_SIZE;
+    height: $HEART_SIZE;
+    transform: rotate(-10deg);
+    z-index: -1;
+
+    #main-heart {
+      bottom: -10em;
+      animation-name: rotate2;
+      animation-delay: 20s;
+      transform: rotate(-120deg);
+    }
+
+    .tabler-icon {
+      fill: lighten($red, 19%);
+      stroke-width: 0;
+      width: $HEART_SIZE;
+      height: auto;
+    }
+
+    .bg-heart {
+      position: absolute;
+      bottom: -15em;
+      width: 100%;
+      height: 100%;
+      transform-origin: bottom;
+      animation: rotate 60s linear 0s infinite normal forwards;
+      opacity: 0.5;
+      z-index: -1;
+      .tabler-icon {
+        fill: lighten($color: $red, $amount: 22%);
+      }
+    }
+  }
+
+  #aira {
+    opacity: 0.5;
+    position: absolute;
+    bottom: -1em;
+    right: 0;
+    animation: float 3s ease-in-out 0s infinite alternate;
+
+    img {
+      user-select: none;
+      pointer-events: none;
+      width: 58em;
+      height: auto;
+    }
+
+    @media screen and (orientation: portrait) {
+      display: none;
+    }
+  }
+
+  @media screen and (orientation: portrait) {
+    font-size: 2.1vh;
+    overflow: auto;
+  }
+
+  @media screen and (orientation: landscape) {
+    max-height: 100vh;
+  }
+}

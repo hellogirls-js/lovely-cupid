@@ -1,112 +1,83 @@
-@font-face {
-  font-family: "Lovehearts";
-  src: url("../fonts/Lovehearts_XYZ.ttf") format(truetype);
+@use "vars" as *;
+@use "sass:color";
+@use "sass:math";
+@use "sass:list";
+
+@function create_random_list() {
+  $list: ();
+  @for $i from 1 to 30 {
+    $list: list.append($list, math.random(100));
+  }
+  @return $list;
 }
 
-@keyframes float {
-  from {
-    transform: translateY(5px);
-  }
-  to {
-    transform: translateY(-5px);
-  }
+a:link,
+a:visited {
+  text-decoration: none;
+  color: $red;
 }
 
-@keyframes bar {
-  @for $i from 1 through 5 {
-    #{($i * 4%)} {
-      transform: scaleY(random(40) * 100%);
+footer {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  opacity: 0.5;
+  z-index: 5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $heading-font;
+}
+
+body {
+  background-color: $base;
+  background-image: linear-gradient(
+    transparent 65%,
+    color.adjust($color: $red, $alpha: -0.9)
+  );
+  background-repeat: no-repeat;
+  color: $text;
+}
+
+p {
+  line-height: 1.4;
+}
+
+#falling-hearts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -10;
+
+  $heart_amt: 10;
+  $partical-position-list: create_random_list();
+
+  .heart {
+    position: absolute;
+    top: 0;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+
+    @for $i from 0 to $heart_amt {
+      &:nth-child(#{$i}) {
+        left: nth($list: $partical-position-list, $n: $i + 1) * 1%;
+        animation-delay: #{$i * 500}ms;
+        animation-duration: #{math.random($limit: 4) * 5}s;
+      }
     }
-    100% {
-      transform: scaleY(1);
+
+    .tabler-icon {
+      stroke-width: 0;
+      fill: lighten($color: $red, $amount: 20%);
+      animation: spin 2s ease-in-out 0s infinite normal forwards;
     }
   }
 }
-
-@keyframes bouncy {
-  0% {
-    transform: translateY(0px);
-  }
-  10% {
-    transform: translateY(-5px);
-  }
-  15% {
-    transform: translateY(-10px);
-  }
-  20% {
-    transform: translateY(-5px);
-  }
-  25% {
-    transform: translateY(0px);
-  }
-  30% {
-    transform: translateY(-5px);
-  }
-  35% {
-    transform: translateY(-10px);
-  }
-  40% {
-    transform: translateY(-5px);
-  }
-  45% {
-    transform: translateY(0px);
-  }
-}
-
-#aira-container {
-  animation: float 0.5s linear 0s infinite alternate;
-}
-
-h1 {
-  font-family: "Lovehearts", sans-serif !important;
-  font-size: 3rem !important;
-}
-
-.animated-bar {
-  transform-origin: bottom;
-}
-
-#bar-1 {
-  animation: bar 3s linear 0.2s infinite alternate;
-}
-
-#bar-2 {
-  animation: bar 3s linear 1.5s infinite normal;
-}
-
-#bar-3 {
-  animation: bar 4s linear 0.9s infinite normal;
-}
-
-#bar-4 {
-  animation: bar 2s linear 0.4s infinite normal;
-}
-
-#bar-5 {
-  animation: bar 5s linear 1s infinite normal;
-}
-
-#bar-6 {
-  animation: bar 1s linear 2s infinite normal;
-}
-
-#bar-7 {
-  animation: bar 4s linear 1.2s infinite normal;
-}
-
-#bar-8 {
-  animation: bar 3s linear 0.4s infinite normal;
-}
-
-#bar-9 {
-  animation: bar 1s linear 1.9s infinite normal;
-}
-
-#bar-10 {
-  animation: bar 2s linear 0.8s infinite normal;
-}
-
-.mini-aira {
-  animation: bouncy 2s linear 1s infinite normal;
-}
-

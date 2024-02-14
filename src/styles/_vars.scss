@@ -1,0 +1,11 @@
+@import url("https://use.typekit.net/yck3zmo.css");
+
+$red: hsl(350, 75%, 70%);
+$blue: hsl(240, 91%, 75%);
+$base: hsl(306, 100%, 98%);
+$text: hsl(309, 6%, 47%);
+$heading-font: "omnes-pro", sans-serif;
+$text-outline: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+  1px 1px 0 white;
+$text-outline-red: -1px -1px 0 $red, 1px -1px 0 $red, -1px 1px 0 $red,
+  1px 1px 0 $red;
